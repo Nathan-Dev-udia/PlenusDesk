@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Comparador de Cupons NFC-e</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='cupons.css') }}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='imagens/imgcrop.png') }}">
+</head>
+
+<body>
+    <!-- Botão de voltar para o menu principal -->
+  <a href="{{ url_for('principal') }}" class="back-button">← Menu Principal</a>
+  <h1>Upload de XMLs NFC-e</h1>
+  <form action="{{ url_for('cupons') }}" method="POST" enctype="multipart/form-data">
+    <label class="custom-file-upload">
+      Selecione arquivos
+      <input type="file" name="xmlfiles" multiple required />
+    </label>
+    <span id="file-chosen">Nenhum arquivo selecionado</span>
+    <button type="submit">Enviar e Comparar</button>
+  </form>
+
+  {% if sequence_breaks %}
+    <h2>Quebras na sequência detectadas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Número Anterior</th>
+          <th>Número Posterior</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for anterior, posterior in sequence_breaks %}
+          <tr>
+            <td><a href="#cupom-{{ anterior }}">{{ anterior }}</a></td>
+            <td><a href="#cupom-{{ posterior }}">{{ posterior }}</a></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+
+  {% if results %}
+    <h2>Todos os Cupons</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Número do Cupom</th>
+          <th>Chave de acesso</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in results %}
+          <tr id="cupom-{{ item.nNF }}" class="
+            {% if item.duplicate %}
+              duplicate
+            {% elif item.sequence_error %}
+              sequence-error
+            {% endif %}
+          ">
+            <td>{{ item.nNF }}</td>
+            <td>{{ item.id_infNFe }}</td>
+            <td>
+              {% if item.duplicate %}
+                Duplicado
+              {% elif item.sequence_error %}
+                Sequência Quebrada
+              {% else %}
+                Autorizado
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+
+  <script src="{{ url_for('static', filename='style.js') }}"></script>
+</body>
+</html>

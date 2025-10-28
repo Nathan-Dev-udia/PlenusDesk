@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlenusDesk</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='imagens/imgcrop.png') }}">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='imagens/logocropada.png') }}" alt="Plenus" class="logo-img">
+    </div>
+    <ul class="menu">
+      <li><a href="{{ url_for('principal') }}"><i data-lucide="building-2"></i> Empresas</a></li>
+      <li><a href="{{ url_for('cupons') }}"><i data-lucide="clipboard-check"></i> Cupons</a></li>
+      <li><a href="{{ url_for('consultfinan') }}"><i data-lucide="dollar-sign"></i> Valores</a></li>
+      <li><a href="{{ url_for('guias') }}"><i data-lucide="file-text"></i> Guias</a></li>
+    </ul>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <div class="content">
+    <h1>
+      Bem-vindo, administrador <img src="{{ url_for('static', filename='imagens/cadeceu.png') }}" alt="Contabilidade" style="width:40px; height:38px; vertical-align:middle;">
+    </h1>
+    <br>
+    <br>
+    <h2>Últimas notícias de contabilidade</h2>
+    <br>
+    <br>
+    <div class="noticias-cards">
+      {% for noticia in noticias %}
+        <div class="card">
+          {% if noticia.imagem %}
+            <img src="{{ noticia.imagem }}" alt="{{ noticia.titulo }}">
+          {% endif %}
+          <h3>{{ noticia.titulo }}</h3>
+          {% if noticia.data %}
+            <p><small>{{ noticia.data }}</small></p>
+          {% endif %}
+          <a href="{{ noticia.link }}" target="_blank">Leia mais</a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

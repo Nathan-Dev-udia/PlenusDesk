@@ -1,0 +1,152 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Layout base */
+body {
+  background: #412c54d3;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 10px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1px;
+  margin-top: -35px;
+}
+
+.sidebar .logo img {
+  max-width: 350px;
+  height: auto;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar nav li {
+  margin: 15px 0;
+}
+
+.sidebar nav a {
+  text-decoration: none;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.sidebar nav a:hover {
+  background-color: rgba(156, 72, 189, 0.959);
+  color: #fff;
+}
+
+/* Conteúdo principal */
+.main-content {
+  flex: 1;
+  padding: 40px 60px;
+  background: #412c54d3;
+}
+
+.main-content h1 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* Card do formulário */
+.form-card {
+  background: #ffffff10;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 600px;
+}
+
+/* Labels e inputs */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #fff;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.95rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+}
+
+input:focus {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
+}
+
+/* Ações */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-submit,
+.btn-cancel {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-submit {
+  background: #9c48bd;
+  color: #fff;
+}
+
+.btn-submit:hover {
+  background: #7f35a3;
+}
+
+.btn-cancel {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.btn-cancel:hover {
+  background: #c0392b;
+}

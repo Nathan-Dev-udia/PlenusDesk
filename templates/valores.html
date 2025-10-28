@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Financeira</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='finan.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='imagens/imgcrop.png') }}">
+</head>
+<body>
+    <div class="container">
+        <a href="{{ url_for('principal') }}" class="btn-back">← Voltar</a>
+
+        <h1>Consulta Financeira</h1>
+
+        <!-- Formulário de upload e filtros -->
+        <form action="{{ url_for('consultfinan') }}" method="POST" enctype="multipart/form-data" class="form-horizontal">
+
+            <!-- Upload XML + botão Importar -->
+            <div class="form-group">
+                <label for="xmlfiles">Selecione os arquivos XML:</label>
+                <div class="input-btn-group">
+                    <input type="file" id="xmlfiles" name="xmlfiles" multiple accept=".xml">
+                    <button type="submit" name="action" value="import">Importar XML</button>
+                </div>
+            </div>
+
+            <!-- Filtrar Pagamentos + botão Filtrar -->
+            <div class="form-group">
+                <h3>Filtrar pagamentos</h3>
+                <div class="input-btn-group">
+                    <!-- Date Picker customizado estilo Bling -->
+                    <button type="button" id="calendarBtn">📅 Selecione período</button>
+                    <button type="submit" name="action" value="filter">Filtrar</button>
+                </div>
+            </div>
+
+            <!-- Período customizado e Month Picker -->
+            <div id="datePicker">
+                <ul>
+                    <li id="opHoje">Hoje</li>
+                    <li id="opSemana">Esta semana</li>
+                    <li id="opMes">Mês</li>
+                    <li id="opCustom">Período customizado</li>
+                </ul>
+
+                <!-- Month Picker -->
+                <div id="monthPicker">
+                    <div class="year-selector">
+                        <button type="button" id="prevYear">&lt;</button>
+                        <span id="currentYear"></span>
+                        <button type="button" id="nextYear">&gt;</button>
+                    </div>
+                    <div class="months-grid">
+                        <div class="month" data-month="01">Jan</div>
+                        <div class="month" data-month="02">Fev</div>
+                        <div class="month" data-month="03">Mar</div>
+                        <div class="month" data-month="04">Abr</div>
+                        <div class="month" data-month="05">Mai</div>
+                        <div class="month" data-month="06">Jun</div>
+                        <div class="month" data-month="07">Jul</div>
+                        <div class="month" data-month="08">Ago</div>
+                        <div class="month" data-month="09">Set</div>
+                        <div class="month" data-month="10">Out</div>
+                        <div class="month" data-month="11">Nov</div>
+                        <div class="month" data-month="12">Dez</div>
+                    </div>
+                </div>
+
+                <!-- Período customizado -->
+                <div id="customPeriod">
+                    <input type="date" id="startDate" name="periodo_inicio" value="{{ periodo_inicio if periodo_inicio else '' }}">
+                    <input type="date" id="endDate" name="periodo_fim" value="{{ periodo_fim if periodo_fim else '' }}">
+                    <button type="button" id="applyCustom">Aplicar</button>
+                </div>
+            </div>
+
+            <!-- Botão Limpar -->
+            <div class="form-group">
+                <button type="submit" name="action" value="clear" class="btn-clear">Limpar</button>
+            </div>
+
+        </form>
+
+        {% if pagamentos %}
+            <h2>Pagamentos encontrados</h2>
+            <table id="tabela_boletos">
+                <thead>
+                    <tr>
+                        <th>Nota</th>
+                        <th>Parcela</th>
+                        <th>Data de Vencimento</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for p in pagamentos %}
+                    <tr>
+                        <td>{{ p.nota }}</td>
+                        <td>{{ p.parcela if p.parcela is defined else 'N/A' }}</td>
+                        <td>{{ p.vencimento }}</td>
+                        <td>{{ p.valor }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <h3>Total: R$ {{ ('%.2f' % total_valor)|replace('.', ',') }}</h3>
+        {% else %}
+            <p>Nenhum pagamento carregado.</p>
+        {% endif %}
+    </div>
+
+    <script src="{{ url_for('static', filename='finan.js') }}"></script>
+</body>
+</html>

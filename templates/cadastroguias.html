@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastrar Guia</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='cadastroguias.css') }}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='imagens/imgcrop.png') }}">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='imagens/logocropada.png') }}" alt="Plenus">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('guias') }}">Voltar</a></li>
+          <li><a href="{{ url_for('listar_usuarios') }}">Empresas</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <main class="main-content">
+      <h1>Cadastro de Guias</h1>
+      <br>
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <div class="flash-container">
+            {% for category, message in messages %}
+              <div class="flash {{ category }}">{{ message }}</div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+
+      <div class="form-card">
+        <form action="{{ url_for('post_guia') }}" method="post" enctype="multipart/form-data">
+
+          <div class="form-section">
+            <label for="empresa">Selecione a Empresa:</label>
+            <select id="empresa" name="empresa" required>
+              <option value="">Selecione uma empresa</option>
+              {% for emp in empresas %}
+                <option value="{{ emp.uid }}">{{ emp.nome }}</option>
+              {% endfor %}
+            </select>
+          </div>
+
+          <div class="form-section">
+            <label for="titulo">Título da Pasta:</label>
+            <input type="text" id="titulo" name="titulo" placeholder="Ex: Guias Outubro 2025" required>
+
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" placeholder="Digite instruções ou observações"></textarea>
+
+            <label for="data_vencimento">Data de Vencimento (opcional):</label>
+            <input type="date" id="data_vencimento" name="data_vencimento">
+          </div>
+
+          <div class="form-section">
+            <label for="file">Arquivos (PDF ou ZIP):</label>
+            <input type="file" id="file" name="file" accept=".pdf,.zip" multiple required>
+            <p class="file-info">Você pode selecionar mais de um arquivo.</p>
+          </div>
+
+          <div class="form-actions">
+            <a href="{{ url_for('guias') }}" class="btn-cancel">Cancelar</a>
+            <button type="submit" class="btn-submit">Enviar Guia</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const flashMessages = document.querySelectorAll(".flash");
+      flashMessages.forEach(msg => {
+        setTimeout(() => {
+          msg.style.transition = "opacity 0.5s ease";
+          msg.style.opacity = "0";
+          setTimeout(() => msg.remove(), 500);
+        }, 3000);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background: #412c54d3;
+  color: #fff;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #ffffff;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.sidebar .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1px;
+  margin-top: -25px;
+}
+
+
+.sidebar .menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar .menu li {
+  margin: 20px 0;
+}
+
+.sidebar .menu li a {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.863);
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  transition: background 0.3s;
+}
+
+.sidebar .menu li a:hover {
+  background: rgba(156, 72, 189, 0.959);
+  border-radius: 8px;
+}
+
+/* Conteúdo principal */
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+.logo-img {
+  max-width: 350px; /* largura máxima */
+  height: auto;     /* mantém a proporção */
+}
+
+.noticias-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: #2c2c54;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  color: #fff;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 5px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 5px;
+  color: #e1c4f7;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,163 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Layout base */
+body {
+  background: #412c54d3;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 10px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1px;
+  margin-top: -35px;
+}
+
+.sidebar .logo img {
+  max-width: 350px;
+  height: auto;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar nav li {
+  margin: 15px 0;
+}
+
+.sidebar nav a {
+  display: block; /* ocupa toda a linha */
+  width: 100%; /* usa toda a largura do li */
+  text-decoration: none;
+  color: #000;
+  background: transparent;
+  padding: 13px 25px; /* aumenta o tamanho vertical */
+  border-radius: 8px;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+
+.sidebar nav a:hover {
+  background-color: rgba(156, 72, 189, 0.959);
+  color: #fff;
+}
+
+/* Conteúdo principal */
+.main-content {
+  flex: 1;
+  padding: 40px 60px;
+  background: #412c54d3;
+}
+
+.main-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* Container da tabela */
+.tabela-container {
+  background: #ffffff10;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  background: transparent;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+/* Cabeçalho */
+thead {
+  background: #533f62;
+  font-weight: bold;
+}
+
+th {
+  padding: 14px 18px;
+  text-align: left;
+}
+
+/* Linhas alternadas */
+tbody tr:nth-child(odd) {
+  background: #533f62;
+}
+
+tbody tr:nth-child(even) {
+  background: #493558;
+}
+
+/* Hover */
+tbody tr:hover {
+  background: #6a4a82;
+  transform: scale(1.01);
+  transition: 0.2s;
+}
+
+/* Células */
+td {
+  padding: 14px 18px;
+}
+
+/* Botão Editar */
+.btn-warning {
+  background: #9c48bd;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-warning:hover {
+  background: #7f35a3;
+}
+
+/* Alerta quando não há empresas */
+.alert-warning {
+  background: #9c48bd;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}

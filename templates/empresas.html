@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresas Cadastradas</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='empresas.css') }}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='imagens/imgcrop.png') }}">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='imagens/logocropada.png') }}" alt="Plenus">
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="{{ url_for('guias') }}">Voltar para o menu</a></li>
+          <li><a href="{{ url_for('cadastrar_empresa') }}">Cadastrar Empresa</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <main class="main-content">
+      <section class="content">
+        <h2>Empresas Cadastradas</h2>
+
+        {% if usuarios %}
+        <div class="tabela-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>CNPJ</th>
+                <th>E-mail</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for usuario in usuarios %}
+              <tr>
+                <td>{{ usuario.nome or "Sem nome" }}</td>
+                <td>{{ usuario.cnpj or "-" }}</td>
+                <td>{{ usuario.email or "-" }}</td>
+                <td>
+                  <a href="{{ url_for('editar_empresa', uid=usuario.uid) }}" class="btn-warning">Editar</a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        {% else %}
+        <div class="alert-warning">
+          Nenhuma empresa encontrada.
+        </div>
+        {% endif %}
+      </section>
+    </main>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guias</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='guias.css') }}">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='imagens/imgcrop.png') }}">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='imagens/logocropada.png') }}" alt="Plenus">
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="#">Agenda</a></li>
+          <li><a href="{{ url_for('cadastroguias') }}">Cadastrar Guia</a></li>
+          <li><a href="{{ url_for('listar_usuarios') }}">Empresas</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <header class="topbar">
+        <li>
+          <a href="{{ url_for('principal') }}" class="backlink">
+            <i data-lucide="home"></i> Voltar a tela inicial
+          </a>
+        </li>
+        <nav class="tabs">
+          <a href="#" class="tab active">Mural</a>
+          <a href="#" class="tab">Agendamentos</a>
+          <a href="#" class="tab">Emails</a>
+        </nav>
+      </header>
+
+      <!-- Lista de guias -->
+      <section id="dynamic-content" class="cards">
+        {% if guias %}
+          {% for guia in guias %}
+          <a href="{{ guia.url }}" target="_blank" class="card-link">
+            <div class="card">
+              <div class="icon">
+                <i data-lucide="clipboard"></i>
+              </div>
+              <div class="content">
+                <h3>{{ guia.titulo }}</h3>
+                <p class="meta">Postado em: {{ guia.data_postagem }}</p>
+                <p class="empresa">
+                  {{ guia.empresa }}
+                  <span class="cnpj">{{ guia.cnpj }}</span>
+                </p>
+              </div>
+            </div>
+          </a>
+          {% endfor %}
+        {% else %}
+          <p style="text-align:center; margin-top:50px;">Nenhuma guia encontrada.</p>
+        {% endif %}
+      </section>
+    </main>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

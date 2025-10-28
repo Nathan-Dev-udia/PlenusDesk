@@ -1,0 +1,6 @@
+ngrok http 5000 no terminal
+Para acessar a aplicação externamente
+Copie o URL gerado pelo ngrok e cole no navegador
+---------------------------------------------------------------------------------------------------------------------------------
+Para descobrir a senha do LocalTunnel: curl https://loca.lt/mytunnelpassword
+Para ativar o LocalTunnel: lt --port 5000 --subdomain plennus

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #f3e8ff;
+  color: #3a005d;
+  margin: 30px auto;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+h1, h2 {
+  font-weight: 600;
+  color: #6a1b9a;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+/* Esconde o input file original */
+input[type="file"] {
+  display: none;
+}
+
+/* Botão customizado para input file */
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #a72596;
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.25s ease;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.custom-file-upload:hover {
+  background-color: #6a1b9a;
+}
+
+/* Texto que mostra a quantidade ou nomes dos arquivos escolhidos */
+#file-chosen {
+  margin-left: 15px;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 400;
+  color: #3a005d;
+  white-space: nowrap;
+}
+
+/* Botão Enviar */
+button {
+  background: #a72596;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  font-family: 'Roboto', sans-serif;
+  white-space: nowrap;
+}
+
+button:hover {
+  background: #6a1b9a;
+}
+
+/* Tabelas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 3px 8px rgba(106, 27, 154, 0.25);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+thead {
+  background: #6a1b9a;
+  color: white;
+}
+
+th, td {
+  padding: 14px 10px;
+  text-align: center;
+  border-bottom: 1px solid #d6b7e5;
+}
+
+tbody tr:hover {
+  background-color: #e9d7ff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Linhas duplicadas */
+.duplicate {
+  background-color: #ffcccc !important;
+  color: #a10000;
+  font-weight: 700;
+}
+
+/* Linhas com erro na sequência */
+.sequence-error {
+  background-color: #ff0055 !important;
+  color: white;
+  font-weight: 700;
+}
+
+/* Links */
+a {
+  color: #a72596;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Botão Menu Principal */
+.back-button {
+  display: inline-block;
+  margin-bottom: 25px;
+  padding: 8px 16px;
+  background-color: #a72596;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.25s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.back-button:hover {
+  background-color: #6a1b9a;
+}
