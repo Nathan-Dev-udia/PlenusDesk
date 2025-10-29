@@ -120,6 +120,38 @@ Ambos os sistemas (PlenusDesk e PlenusApp) utilizam o **mesmo Firebase Realtime 
 📦 Repositório do PlenusApp: (link em breve)
 
 ---
+---
+
+## 🚀 Aprendizados e Decisões Técnicas
+
+Durante o desenvolvimento do **PlenusDesk** e do **PlenusApp**, enfrentei diversos desafios técnicos que resultaram em aprendizados valiosos e decisões estratégicas para equilibrar **custo, desempenho e segurança**.
+
+### 💡 Principais Aprendizados
+
+- **Primeiro contato com bancos NoSQL:** o projeto marcou minha primeira experiência prática com o **Firebase Realtime Database**, exigindo uma nova forma de estruturar e consultar dados.  
+- **Primeira aplicação mobile real:** o **PlenusApp** foi meu primeiro projeto em **Flutter** desenvolvido para uma aplicação **real de uso empresarial**, integrando autenticação, sincronização em tempo real e acesso a dados remotos.  
+- **Primeiro uso do Firebase e da autenticação em nuvem:** explorei a integração entre **Firebase Authentication** e **Realtime Database**, entendendo na prática como gerenciar usuários e permissões em um ecossistema conectado.  
+- **Integração entre sistemas web e mobile:** aprimorei o uso de **APIs REST** e comunicação entre o **Flask** e o **Flutter (mobile)**, garantindo sincronização imediata entre painel e aplicativo.  
+
+### 🧩 Decisão sobre o Google Drive
+
+Optei por utilizar o **Google Drive** em vez do **Firebase Storage** por **questões de custo e escalabilidade**.  
+O Firebase Storage exigiria planos pagos para volumes maiores de arquivos, enquanto o Google Drive oferece uma **solução gratuita e suficientemente robusta** para o fluxo de documentos fiscais das empresas parceiras.  
+Além disso, a integração via **Drive API** possibilitou uma estrutura de pastas mais clara e organizada, algo essencial para o uso contábil.
+
+### 🧠 Habilidades Desenvolvidas
+
+- Primeiro contato prático com **Firebase** (Authentication e Realtime Database), entendendo na prática o modelo **NoSQL** e a sincronização em tempo real;  
+- Desenvolvimento do **primeiro aplicativo Flutter** aplicado a um **caso real de uso empresarial**;  
+- Integração entre **Flask**, **Firebase** e **aplicativo mobile Flutter**, garantindo comunicação consistente entre as plataformas;  
+- Experiência em **design de arquitetura integrada** entre sistemas web e mobile, planejando escalabilidade e modularidade;  
+- Consolidação de práticas de **sincronização de dados entre nuvem e dispositivos locais**, com foco em eficiência e segurança.
+
+---
+
+> 💬 O projeto marcou uma etapa importante da minha evolução como desenvolvedor, integrando pela primeira vez um sistema web e um app móvel em um mesmo ecossistema funcional.
+
+---
 ## 🧑‍💻 Autor
 
 **Nathan Fernandes Alves**
