@@ -23,8 +23,16 @@ O sistema integra **Firebase** e **Google Drive** para sincronização automáti
 4. A **ID dessa pasta** é salva no **Firebase Realtime Database**, dentro do nó `usuarios/<user_id>`;  
 5. O **PlenusApp** utiliza essa ID para acessar e exibir os arquivos correspondentes ao cliente.
 
-🎥 **Demonstração:**  
-[▶️ Assistir “Cadastro do Cliente”](https://youtu.be/L7051IGdOac)
+### 🎥 Demonstração — Cadastro de Cliente
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/SEU_ID_DO_VIDEO](https://youtu.be/L7051IGdOac"
+title="Cadastro de Cliente — PlenusDesk"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+
 
 
 ### 🔹 Postagem de Guias
