@@ -1,4 +1,4 @@
-# 🧩 PlenusDesk
+# PlenusDesk
 
 **PlenusDesk** é uma aplicação web administrativa desenvolvida em **Flask**, utilizada por **empresas de contabilidade** para gerenciar clientes, guias de pagamento e documentos fiscais de forma centralizada.
 
