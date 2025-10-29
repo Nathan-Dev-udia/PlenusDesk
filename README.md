@@ -24,7 +24,7 @@ O sistema integra **Firebase** e **Google Drive** para sincronização automáti
 5. O **PlenusApp** utiliza essa ID para acessar e exibir os arquivos correspondentes ao cliente.
 
 🎥 **Demonstração:**  
-[▶️ Assistir “Cadastro do Cliente”](static/cadastro%20do%20cliente.mp4)
+[▶️ Assistir “Cadastro do Cliente”](https://youtu.be/L7051IGdOac)
 
 
 ### 🔹 Postagem de Guias
