@@ -92,12 +92,11 @@ Ambos os sistemas (PlenusDesk e PlenusApp) utilizam o **mesmo Firebase Realtime 
 
 ## 🧑‍💻 Autor
 
-**Nathan Fernandes Alves**
-
-Desenvolvedor FullStack • Foco em sistemas integrados e soluções automatizadas
+**Nathan Fernandes Alves**  
+Desenvolvedor FullStack • Foco em sistemas integrados e soluções automatizadas  
 
 | Contato | Link |
-| :--- | :--- |
-| 📧 **E-mail Profissional** | (Insira o e-mail aqui) |
-| 💼 **LinkedIn** | (Insira o link do LinkedIn aqui) |
-| 🌐 **GitHub** | (Insira o link do GitHub aqui) |
+| :-- | :-- |
+| 📧 **E-mail Profissional** | [nathan.fernandes.dev@gmail.com](mailto:nathan.fernandes.dev@gmail.com) |
+| 💼 **LinkedIn** | [linkedin.com/in/nathan-fernandes-alves](https://www.linkedin.com/in/nathan-fernandes-alves) |
+| 🌐 **GitHub** | [github.com/nathan-fernandes-alves](https://github.com/nathan-fernandes-alves) |
