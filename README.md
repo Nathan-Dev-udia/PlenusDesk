@@ -26,7 +26,7 @@ O sistema integra **Firebase** e **Google Drive** para sincronização automáti
 ### 🎥 Demonstração — Cadastro de Cliente
 (clique na imagem abaixo para acessar o vídeo)
 
-[![Cadastro de Cliente — PlenusDesk](https://img.youtube.com/vi/L7051IGdOac/0.jpg)](https://youtu.be/L7051IGdOac "Assista no YouTube")
+[![Acesso às Guias — PlenusApp](https://img.youtube.com/vi/4oot05qes-M/0.jpg)](https://youtu.be/4oot05qes-M "Assista no YouTube")
 
 
 ### 🔹 Postagem de Guias
