@@ -34,12 +34,27 @@ O sistema integra **Firebase** e **Google Drive** para sincronização automáti
 1. O administrador seleciona e envia os **documentos fiscais (PDF, XML, ZIP, etc)**;  
 2. O sistema cria automaticamente uma **subpasta** dentro da pasta do cliente selecionado no Google Drive;  
 3. Os arquivos são enviados para essa pasta e o **link** é armazenado no Firebase;  
-4. O cliente visualiza as guias no aplicativo, com título, descrição ou instruções referente aos documentos, data e link direto para acessar a subpasta com os arquivos.
 
 #### 🎥 Demonstração — Postagem de Guia
 (clique na imagem abaixo)
 
 [![Postagem de Guia — PlenusDesk](https://img.youtube.com/vi/0ewJCWLgxqI/0.jpg)](https://youtu.be/0ewJCWLgxqI "Assista no YouTube")
+
+
+### 🔹 Acesso e Visualização de Guias
+
+1. O cliente realiza o **login** utilizando o **Firebase Authentication**, com as credenciais cadastradas pelo administrador;  
+2. Após a autenticação, o aplicativo obtém a **ID da pasta** associada ao cliente no Firebase;  
+3. Com base nessa ID, o **PlenusApp** exibe todas as **guias** disponíveis, incluindo:
+   - Título e descrição do documento;  
+   - Data de postagem;  
+   - Link direto para a **subpasta no Google Drive** onde os arquivos estão armazenados;  
+4. O cliente pode clicar para abrir a pasta e visualizar os arquivos disponiveis.
+
+#### 🎥 Demonstração — Acesso às Guias no App
+(clique na imagem abaixo)
+
+[![Acesso às Guias — PlenusApp](https://img.youtube.com/vi/4oot05qes-M/0.jpg)](https://youtu.be/4oot05qes-M "Assista no YouTube")
 
 ---
 
