@@ -24,6 +24,7 @@ O sistema integra **Firebase** e **Google Drive** para sincronização automáti
 5. O **PlenusApp** utiliza essa ID para acessar e exibir os arquivos correspondentes ao cliente.
 
 ### 🎥 Demonstração — Cadastro de Cliente
+(clique na imagem abaixo para acessar o vídeo)
 
 [![Cadastro de Cliente — PlenusDesk](https://img.youtube.com/vi/L7051IGdOac/0.jpg)](https://youtu.be/L7051IGdOac "Assista no YouTube")
 
@@ -35,7 +36,9 @@ O sistema integra **Firebase** e **Google Drive** para sincronização automáti
 3. Os arquivos são enviados para essa pasta e o **link** é armazenado no Firebase;  
 4. O cliente visualiza as guias no aplicativo, com título, descrição ou instruções referente aos documentos, data e link direto para acessar a subpasta com os arquivos.
 
-#### 🎥 Demonstração — Postagem de Guia  
+#### 🎥 Demonstração — Postagem de Guia
+(clique na imagem abaixo)
+
 [![Postagem de Guia — PlenusDesk](https://img.youtube.com/vi/0ewJCWLgxqI/0.jpg)](https://youtu.be/0ewJCWLgxqI "Assista no YouTube")
 
 ---
