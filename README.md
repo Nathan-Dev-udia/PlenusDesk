@@ -56,7 +56,7 @@ graph TD;
     B --> C[Salva ID da pasta no Firebase Database];
     C --> D[📂 Admin envia guias];
     D --> E[Drive cria subpasta e armazena arquivos];
-    E --> F[Firebase recebe link público da subpasta];
+    E --> F[Firebase recebe link da subpasta];
     F --> G[📱 PlenusApp acessa as subpastas com acesso aos arquivos];
     G --> H[🧾 Cliente visualiza as guias no app];
     H --> I[Após o uso dos arquivos, cliente marca a subpasta exibida como concluída no app];
