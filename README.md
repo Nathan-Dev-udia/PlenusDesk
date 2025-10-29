@@ -6,7 +6,7 @@ Os clientes não acessam diretamente o painel Flask — eles interagem com os da
 
 ---
 > ⚠️ **Aviso:**
-
+>
 > O repositório disponibiliza o código do PlenusDesk, mas a integração com **Firebase** e **Google Drive** foi removida por questões de segurança. Quem clonar o projeto não terá acesso a essa funcionalidade, que envolve sincronização de usuários e arquivos com o PlenusApp.
 > O restante das funcionalidades do projeto, como validação de cupons fiscais e processamento de notas, está completo e pode ser testado normalmente.
 
