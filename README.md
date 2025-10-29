@@ -5,7 +5,8 @@
 Os clientes não acessam diretamente o painel Flask — eles interagem com os dados por meio do **[PlenusApp](#-conexão-com-o-plenusapp)**, um aplicativo Android desenvolvido em **Flutter**, que consome e exibe as informações sincronizadas automaticamente pelo PlenusDesk.
 
 ---
-> ⚠️ **Aviso:**  
+> ⚠️ **Aviso:**
+
 > O repositório disponibiliza o código do PlenusDesk, mas a integração com **Firebase** e **Google Drive** foi removida por questões de segurança. Quem clonar o projeto não terá acesso a essa funcionalidade, que envolve sincronização de usuários e arquivos com o PlenusApp.
 > O restante das funcionalidades do projeto, como validação de cupons fiscais e processamento de notas, está completo e pode ser testado normalmente.
 
