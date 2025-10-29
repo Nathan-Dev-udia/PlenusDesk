@@ -88,7 +88,7 @@ A plataforma foi construída com um conjunto de tecnologias modernas e integrada
 
 Os vídeos de demonstração a seguir mostram o sistema em uso real e destacam as funcionalidades principais:
 
-* **👤 Cadastro de usuários** e sincronização automática com o Firebase;
+* **👤 [Cadastro de usuários](https://youtu.be/L7051IGdOac)** e sincronização automática com o Firebase;
 * **📂 Envio de guias** e criação automática de pastas no Google Drive;
 * **🔁 Exibição em tempo real** dos dados no PlenusApp;
 * **🧾 Funções automáticas** de conferência de cupons e cálculo mensal de notas fiscais.
