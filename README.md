@@ -89,6 +89,11 @@ graph TD;
     H --> I[Após o uso dos arquivos, cliente marca a subpasta exibida como concluída no app];
 ```
 
+**🎬 Veja o fluxo completo em vídeo:** [YouTube](https://youtu.be/OUaO2QWiLJU)  
+O vídeo mostra desde o cadastro de clientes e guias no [PlenusDesk](https://github.com/Nathan-Dev-udia/PlenusDesk) até a utilização do PlenusApp, incluindo a sincronização em tempo real e o uso das principais funcionalidades do app.
+
+---
+
 ## 🧠 Arquitetura Técnica
 
 A plataforma foi construída com um conjunto de tecnologias modernas e integradas, focando em escalabilidade e sincronização em tempo real.
