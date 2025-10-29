@@ -35,6 +35,9 @@ O sistema integra **Firebase** e **Google Drive** para sincronização automáti
 3. Os arquivos são enviados para essa pasta e o **link** é armazenado no Firebase;  
 4. O cliente visualiza as guias no aplicativo, com título, descrição ou instruções referente aos documentos, data e link direto para acessar a subpasta com os arquivos.
 
+#### 🎥 Demonstração — Postagem de Guia  
+[![Postagem de Guia — PlenusDesk](https://img.youtube.com/vi/0ewJCWLgxqI/0.jpg)](https://youtu.be/0ewJCWLgxqI "Assista no YouTube")
+
 ---
 
 ## ⚙️ Funcionalidades Complementares
