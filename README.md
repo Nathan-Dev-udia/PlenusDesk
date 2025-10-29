@@ -55,7 +55,7 @@ graph TD;
     E --> F[Firebase recebe link público da subpasta];
     F --> G[📱 PlenusApp acessa as subpastas com acesso aos arquivos];
     G --> H[🧾 Cliente visualiza as guias no app];
-    H --> I[Após o uso dos arquivos, cliente marca a subpasta exibida como "concluída no app"];
+    H --> I[Após o uso dos arquivos, cliente marca a subpasta exibida como concluída no app];
 ```
 
 ## 🧠 Arquitetura Técnica
