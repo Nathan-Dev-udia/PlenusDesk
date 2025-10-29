@@ -120,7 +120,6 @@ Ambos os sistemas (PlenusDesk e PlenusApp) utilizam o **mesmo Firebase Realtime 
 📦 Repositório do PlenusApp: (link em breve)
 
 ---
----
 
 ## 🚀 Aprendizados e Decisões Técnicas
 
