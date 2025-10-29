@@ -2,18 +2,18 @@
 
 **PlenusDesk** é uma aplicação web administrativa desenvolvida em **Flask**, utilizada por **empresas de contabilidade** para gerenciar clientes, guias de pagamento e documentos fiscais de forma centralizada.
 
-Os clientes não acessam diretamente o painel Flask — eles interagem com os dados por meio do **[PlenusApp](#-conexão-com-o-plenusapp)**, um aplicativo Android desenvolvido em **Flutter**, que consome e exibe as informações sincronizadas automaticamente pelo PlenusDesk.
+Os clientes não acessam diretamente o painel Flask — eles interagem com os dados por meio do **[PlenusApp](https://github.com/Nathan-Dev-udia/PlenusApp)**, um aplicativo Android desenvolvido em **Flutter**, que consome e exibe as informações sincronizadas automaticamente pelo PlenusDesk.
 
 ---
 > ⚠️ **Aviso:**
 >
-> O repositório disponibiliza o código do PlenusDesk, mas a integração com **Firebase** e **Google Drive** foi removida por questões de segurança. Quem clonar o projeto não terá acesso a essa funcionalidade, que envolve sincronização de usuários e arquivos com o PlenusApp.
+> O repositório disponibiliza o código do PlenusDesk, mas a integração com **Firebase** e **Google Drive** foi removida por questões de segurança. Quem clonar o projeto não terá acesso a essa funcionalidade, que envolve sincronização de usuários e arquivos com o [PlenusApp](https://github.com/Nathan-Dev-udia/PlenusApp).
 > O restante das funcionalidades do projeto, como validação de cupons fiscais e processamento de notas, está completo e pode ser testado normalmente.
 
 ---
 ## ☁️ Integração com Firebase e Google Drive
 
-O sistema integra **Firebase** e **Google Drive** para sincronização automática de dados e arquivos entre o painel administrativo (PlenusDesk) e o aplicativo mobile (PlenusApp).
+O sistema integra **Firebase** e **Google Drive** para sincronização automática de dados e arquivos entre o painel administrativo (PlenusDesk) e o aplicativo mobile ([PlenusApp](https://github.com/Nathan-Dev-udia/PlenusApp)).
 
 ### 🔹 Criação de Usuário
 
@@ -21,7 +21,7 @@ O sistema integra **Firebase** e **Google Drive** para sincronização automáti
 2. O sistema registra o usuário no **Firebase Authentication** com as credenciais informadas;  
 3. É criada uma **pasta no Google Drive**, nomeada com o nome da empresa do cliente;  
 4. A **ID dessa pasta** é salva no **Firebase Realtime Database**, dentro do nó `usuarios/<user_id>`;  
-5. O **PlenusApp** utiliza essa ID para acessar e exibir os arquivos correspondentes ao cliente.
+5. O **[PlenusApp](https://github.com/Nathan-Dev-udia/PlenusApp)** utiliza essa ID para acessar e exibir os arquivos correspondentes ao cliente.
 
 ### 🎥 Demonstração — Cadastro de Cliente
 (clique na imagem abaixo para acessar o vídeo)
@@ -90,7 +90,7 @@ graph TD;
 ```
 
 **🎬 Veja o fluxo completo em vídeo:** [YouTube](https://youtu.be/OUaO2QWiLJU)  
-O vídeo mostra desde o cadastro de clientes e guias no [PlenusDesk](https://github.com/Nathan-Dev-udia/PlenusDesk) até a utilização do PlenusApp, incluindo a sincronização em tempo real e o uso das principais funcionalidades do app.
+O vídeo mostra desde o cadastro de clientes e guias no [PlenusDesk](https://github.com/Nathan-Dev-udia/PlenusDesk) até a utilização do [PlenusApp](https://github.com/Nathan-Dev-udia/PlenusApp), incluindo a sincronização em tempo real e o uso das principais funcionalidades do app.
 
 ---
 
@@ -113,16 +113,16 @@ Os vídeos de demonstração a seguir mostram o sistema em uso real e destacam a
 
 * **👤 [Cadastro de usuários](https://youtu.be/L7051IGdOac)** e sincronização automática com o Firebase;
 * **📂 [Cadastro e envio de guias](https://youtu.be/0ewJCWLgxqI)** e criação automática de pastas no Google Drive;
-* **📱 [Acesso à guia e do usuário](https://youtu.be/4oot05qes-M)** direto do aplicativo PlenusApp;
-* **🧾 [Visualização de todos os passos](https://youtu.be/OUaO2QWiLJU)**, do PlenusDesk (site) ao acesso do cliente ao PlenusApp (aplicativo).
+* **📱 [Acesso à guia e do usuário](https://youtu.be/4oot05qes-M)** direto do aplicativo [PlenusApp](https://github.com/Nathan-Dev-udia/PlenusApp);
+* **🧾 [Visualização de todos os passos](https://youtu.be/OUaO2QWiLJU)**, do PlenusDesk (site) ao acesso do cliente ao [PlenusApp](https://github.com/Nathan-Dev-udia/PlenusApp) (aplicativo).
 
-## 📱 Conexão com o PlenusApp
+## 📱 Conexão com o [PlenusApp](https://github.com/Nathan-Dev-udia/PlenusApp)
 
-O **PlenusApp** é o aplicativo Android desenvolvido em Flutter que permite aos clientes visualizar as guias, documentos e arquivos enviados via PlenusDesk.
+O **[PlenusApp](https://github.com/Nathan-Dev-udia/PlenusApp)** é o aplicativo Android desenvolvido em Flutter que permite aos clientes visualizar as guias, documentos e arquivos enviados via PlenusDesk.
 
 Ambos os sistemas (PlenusDesk e PlenusApp) utilizam o **mesmo Firebase Realtime Database**, garantindo **sincronização imediata e segura** de todos os dados entre o painel administrativo e o aplicativo do cliente.
 
-📦 Repositório do PlenusApp: (link em breve)
+📦 Repositório do **PlenusApp**: [Clique aqui](https://github.com/Nathan-Dev-udia/PlenusApp)
 
 ---
 
@@ -133,7 +133,7 @@ Durante o desenvolvimento do **PlenusDesk** e do **PlenusApp**, enfrentei divers
 ### 💡 Principais Aprendizados
 
 - **Primeiro contato com bancos NoSQL:** o projeto marcou minha primeira experiência prática com o **Firebase Realtime Database**, exigindo uma nova forma de estruturar e consultar dados.  
-- **Primeira aplicação mobile real:** o **PlenusApp** foi meu primeiro projeto em **Flutter** desenvolvido para uma aplicação **real de uso empresarial**, integrando autenticação, sincronização em tempo real e acesso a dados remotos.  
+- **Primeira aplicação mobile real:** o **[PlenusApp](https://github.com/Nathan-Dev-udia/PlenusApp)** foi meu primeiro projeto em **Flutter** desenvolvido para uma aplicação **real de uso empresarial**, integrando autenticação, sincronização em tempo real e acesso a dados remotos.  
 - **Primeiro uso do Firebase e da autenticação em nuvem:** explorei a integração entre **Firebase Authentication** e **Realtime Database**, entendendo na prática como gerenciar usuários e permissões em um ecossistema conectado.  
 - **Integração entre sistemas web e mobile:** aprimorei o uso de **APIs REST** e comunicação entre o **Flask** e o **Flutter (mobile)**, garantindo sincronização imediata entre painel e aplicativo.  
 
