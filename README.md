@@ -90,7 +90,7 @@ graph TD;
 ```
 
 **🎬 Veja o fluxo completo em vídeo:** [YouTube](https://youtu.be/OUaO2QWiLJU)  
-O vídeo mostra desde o cadastro de clientes e guias no [PlenusDesk](https://github.com/Nathan-Dev-udia/PlenusDesk) até a utilização do [PlenusApp](https://github.com/Nathan-Dev-udia/PlenusApp), incluindo a sincronização em tempo real e o uso das principais funcionalidades do app.
+O vídeo mostra desde o cadastro de clientes e guias no PlenusDesk até a utilização do [PlenusApp](https://github.com/Nathan-Dev-udia/PlenusApp), incluindo a sincronização em tempo real e o uso das principais funcionalidades do app.
 
 ---
 
