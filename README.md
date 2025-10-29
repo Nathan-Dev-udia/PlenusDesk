@@ -18,10 +18,14 @@ O sistema integra **Firebase** e **Google Drive** para sincronização automáti
 ### 🔹 Criação de Usuário
 
 1. O administrador cria um novo cliente no **PlenusDesk**;  
-2. O sistema registra o usuário no **Firebase Authentication** com as credenciais informadas;
-3. É criada uma **pasta no Google Drive**, nomeada com o nome da empresa do cliente;
+2. O sistema registra o usuário no **Firebase Authentication** com as credenciais informadas;  
+3. É criada uma **pasta no Google Drive**, nomeada com o nome da empresa do cliente;  
 4. A **ID dessa pasta** é salva no **Firebase Realtime Database**, dentro do nó `usuarios/<user_id>`;  
 5. O **PlenusApp** utiliza essa ID para acessar e exibir os arquivos correspondentes ao cliente.
+
+🎥 **Demonstração:**  
+[▶️ Assistir “Cadastro do Cliente”](static/cadastro%20do%20cliente.mp4)
+
 
 ### 🔹 Postagem de Guias
 
